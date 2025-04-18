@@ -1,0 +1,16 @@
+<div class="type-of-birds-container">
+  <div class="header">
+    <h2>Type of Birds</h2>
+  </div>
+
+  <div class="bird-type-list">
+    <div class="bird-type" *ngFor="let bird of birds">
+      <span>{{ bird.label }}</span>
+      <mat-slide-toggle color="primary" [(ngModel)]="bird.selected"></mat-slide-toggle>
+    </div>
+  </div>
+
+  <button mat-fab color="primary" class="fab" (click)="navigateTo('farm-details')">
+    <mat-icon >arrow_forward</mat-icon>
+  </button>
+</div>

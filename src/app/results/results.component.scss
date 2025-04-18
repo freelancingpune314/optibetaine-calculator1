@@ -1,0 +1,64 @@
+$orange-color: #dea13b;
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.header {
+  width: 100%;
+  background-color: $orange-color;
+  padding: 32px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.result-content {
+  text-align: center;
+  margin-top: 60px;
+
+  .label {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+  }
+
+  .value {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+  }
+
+  .unit {
+    font-size: 22px;
+    font-family: Georgia, serif;
+    margin-top: 10px;
+  }
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 300px;
+
+  button {
+    background-color: $orange-color !important;
+    color: white !important;
+  }
+}

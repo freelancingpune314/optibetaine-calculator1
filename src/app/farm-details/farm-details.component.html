@@ -1,0 +1,28 @@
+<div class="farm-container">
+  <div class="header">
+    <h2>Farm Details</h2>
+  </div>
+
+  <div class="form-content">
+    <div class="form-field">
+      <label>No. of Birds</label>
+      <input matInput type="number" [(ngModel)]="birdsCount" placeholder="Enter count">
+    </div>
+
+    <div class="form-field age-section">
+      <label>Age of Birds</label>
+      <div class="age-inputs">
+        <div>
+          <label class="sub-label">From</label>
+          <input matInput type="number" [(ngModel)]="ageFrom" placeholder="From">
+        </div>
+        <div>
+          <label class="sub-label">To</label>
+          <input matInput type="number" [(ngModel)]="ageTo" placeholder="To">
+        </div>
+      </div>
+    </div>
+
+    <button mat-raised-button color="primary" class="calculate-btn" (click)="navigateTo('results')">Calculate</button>
+  </div>
+</div>

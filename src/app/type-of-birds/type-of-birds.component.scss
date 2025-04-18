@@ -1,0 +1,56 @@
+$type-color: #dea13b;
+
+.type-of-birds-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+}
+
+.header {
+  background-color: $type-color;
+  padding: 30px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.bird-type-list {
+  padding: 32px 24px;
+  flex: 1;
+
+  .bird-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    color: #000;
+  }
+
+  ::ng-deep .mat-slide-toggle-thumb {
+    background-color: $type-color !important;
+  }
+
+  ::ng-deep .mat-slide-toggle-bar {
+    background-color: #ccc !important;
+  }
+}
+
+.fab {
+  background-color: $type-color !important;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  color: white;
+}
