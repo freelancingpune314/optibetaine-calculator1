@@ -4,8 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  private birdType: string = '';
+  public birdType: string = '';
   private farmDetails: any = {};
+  public birdsCount: any = 0;
+  public fromDate: any = 0;
+  public toDate: any = 0;
 
   setBirdType(type: string) {
     this.birdType = type;

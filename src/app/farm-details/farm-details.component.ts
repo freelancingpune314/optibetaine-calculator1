@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 })
 export class FarmDetailsComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public dataService: DataService) {}
   birdsCount: number;
   ageFrom: number;
   ageTo: number;
@@ -18,5 +18,7 @@ export class FarmDetailsComponent {
   navigateTo(route: string) {
     this.router.navigate([route]);
   }
+
+
 }
 

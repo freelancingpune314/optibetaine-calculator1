@@ -6,7 +6,7 @@
   <div class="form-content">
     <div class="form-field">
       <label>No. of Birds</label>
-      <input matInput type="number" [(ngModel)]="birdsCount" placeholder="Enter count">
+      <input matInput type="number" [(ngModel)]="dataService.birdsCount" placeholder="Enter count">
     </div>
 
     <div class="form-field age-section">
@@ -14,11 +14,11 @@
       <div class="age-inputs">
         <div>
           <label class="sub-label">From</label>
-          <input matInput type="number" [(ngModel)]="ageFrom" placeholder="From">
+          <input matInput type="number" [(ngModel)]="dataService.fromDate" placeholder="From">
         </div>
         <div>
           <label class="sub-label">To</label>
-          <input matInput type="number" [(ngModel)]="ageTo" placeholder="To">
+          <input matInput type="number" [(ngModel)]="dataService.toDate" placeholder="To">
         </div>
       </div>
     </div>
