@@ -200,13 +200,13 @@ export class ResultsComponent implements OnInit{
     "66": "518"
   }
 
-
-
-
   constructor(private router: Router, public dataService: DataService) {}
 
   ngOnInit(): void {
     this.calculateTablets();
+    this.dataService.birdsCount = 0;
+    this.dataService.fromDate = 0;
+    this.dataService.toDate = 0;
   }
 
   calculateTablets() {
@@ -220,9 +220,9 @@ export class ResultsComponent implements OnInit{
       refToJsonVal = this.breederVal;
     }
 
-    for(let day in this.boilerVal) {
+    for(let day in refToJsonVal) {
       if(day >= this.dataService.fromDate && day <= this.dataService.toDate) {
-        waterLevelArr = waterLevelArr + Number(this.boilerVal[day]);
+        waterLevelArr = waterLevelArr + Number(refToJsonVal[day]);
       }
     }
 

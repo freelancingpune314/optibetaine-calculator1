@@ -2,7 +2,7 @@
   height: 100vh; /* Full screen height */
   display: flex;
   flex-direction: column;
-  font-family: auto;
+  font-family: serif;
 }
 
 .bottom-part {
@@ -70,4 +70,8 @@
     justify-content: center;
     font-size: 8vw;
     font-weight: bolder;
+  }
+
+  .value {
+    margin: 0;
   }

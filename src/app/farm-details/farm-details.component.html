@@ -8,7 +8,7 @@
         <div class="form-field count-section">
           <label>No. of Birds</label>
           <div>
-            <input matInput type="number" formControlName="birdsCount" placeholder="Enter count">
+            <input matInput type="number" formControlName="birdsCount" placeholder="Enter Count">
             <div class="error-msg" *ngIf="submitted && farmForm.get('birdsCount')?.errors?.['required']">
               Number of birds is required
             </div>
