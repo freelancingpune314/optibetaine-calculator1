@@ -1,25 +1,29 @@
-<div class="type-of-birds-container">
-  <div class="header">
-    <h2>Type of Birds</h2>
+<div class="container type-of-birds-container">
+  <div class="top-part header-wrapper">
+    <h1>Type of Birds</h1>
   </div>
 
-  <div class="bird-type-list">
-    <div class="bird-type" *ngFor="let bird of birds; let i = index">
-      <span>{{ bird.label }}</span>
-      <mat-slide-toggle
-        color="primary"
-        [checked]="bird.selected"
-        (change)="onToggle(i)">
-      </mat-slide-toggle>
+  <div class="bottom-part">
+    <div class="bird-type-list">
+      <div class="bird-type" *ngFor="let bird of birds; let i = index">
+        <span>{{ bird.label }}</span>
+        <mat-slide-toggle
+          color="primary"
+          [checked]="bird.selected"
+          (change)="onToggle(i)">
+        </mat-slide-toggle>
+      </div>
+    </div>
+    <div class="next-btn-wrapper">
+      <button
+      id="next-btn"
+      mat-fab
+      color="primary"
+      class="fab"
+      [disabled]="!isAnyBirdSelected()"
+      (click)="navigateTo('farm-details')">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
     </div>
   </div>
-
-  <button
-    mat-fab
-    color="primary"
-    class="fab"
-    [disabled]="!isAnyBirdSelected()"
-    (click)="navigateTo('farm-details')">
-    <mat-icon>arrow_forward</mat-icon>
-  </button>
 </div>

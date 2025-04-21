@@ -41,8 +41,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatIconModule,
     FormsModule,
     MatSlideToggleModule,
-    MatIconModule,
-    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

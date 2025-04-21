@@ -1,45 +1,52 @@
-<div class="farm-container">
-  <form [formGroup]="farmForm" (ngSubmit)="onCalculateClick()">
-    <div class="header">
-      <h2>Farm Details</h2>
-    </div>
-
-    <div class="form-content">
-      <div class="form-field">
-        <label>No. of Birds</label>
-        <input matInput type="number" formControlName="birdsCount" placeholder="Enter count">
-        <div class="error-msg" *ngIf="submitted && farmForm.get('birdsCount')?.errors?.['required']">
-          Number of birds is required
+<div class="container farm-container">
+  <div class="top-part header-wrapper">
+    <h1>Farm Details</h1>
+  </div>
+  <div class="bottom-part">
+    <form class="form-container" [formGroup]="farmForm" (ngSubmit)="onCalculateClick()">
+      <div class="field-wrapper">
+        <div class="form-field count-section">
+          <label>No. of Birds</label>
+          <div>
+            <input matInput type="number" formControlName="birdsCount" placeholder="Enter count">
+            <div class="error-msg" *ngIf="submitted && farmForm.get('birdsCount')?.errors?.['required']">
+              Number of birds is required
+            </div>
+            <div class="error-msg" *ngIf="submitted && farmForm.get('birdsCount')?.errors?.['min']">
+              Number of birds must be at least 1
+            </div>
+          </div>
         </div>
-        <div class="error-msg" *ngIf="submitted && farmForm.get('birdsCount')?.errors?.['min']">
-          Number of birds must be at least 1
+        
+  
+        <div class="form-field age-section">
+          <label>Age of Birds</label>
+          <div class="age-inputs">
+            <div class="age-section1">
+              <label class="sub-label">From</label>
+              <input matInput type="number" formControlName="fromDate" placeholder="From">
+              <div class="error-msg" *ngIf="submitted && farmForm.get('fromDate')?.errors?.['required']">
+                From age is required
+              </div>
+            </div>
+            <div class="age-section1">
+              <label class="sub-label">To</label>
+              <input matInput type="number" formControlName="toDate" placeholder="To">
+              <div class="error-msg" *ngIf="submitted && farmForm.get('toDate')?.errors?.['required']">
+                To age is required
+              </div>
+            </div>
+          </div>
+  
+          <div class="error-msg" *ngIf="submitted && farmForm.hasError('fromGreaterThanTo')">
+            'From' age should be less than 'To' age.
+          </div>
         </div>
       </div>
-
-      <div class="form-field age-section">
-        <label>Age of Birds</label>
-        <div class="age-inputs">
-          <div>
-            <label class="sub-label">From</label>
-            <input matInput type="number" formControlName="fromDate" placeholder="From">
-            <div class="error-msg" *ngIf="submitted && farmForm.get('fromDate')?.errors?.['required']">
-              From age is required
-            </div>
-          </div>
-          <div>
-            <label class="sub-label">To</label>
-            <input matInput type="number" formControlName="toDate" placeholder="To">
-            <div class="error-msg" *ngIf="submitted && farmForm.get('toDate')?.errors?.['required']">
-              To age is required
-            </div>
-          </div>
-        </div>
-
-        <div class="error-msg" *ngIf="submitted && farmForm.hasError('fromGreaterThanTo')">
-          'From' age should be less than 'To' age.
-        </div>
-
+      
+      <div class="btn-section">
         <button
+          id="calculate-btn"
           mat-raised-button
           color="primary"
           class="calculate-btn"
@@ -47,6 +54,7 @@
           Calculate
         </button>
       </div>
-    </div>
-  </form>
+        
+    </form>
+  </div>
 </div>

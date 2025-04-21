@@ -1,11 +1,11 @@
-<div class="home-container">
-  <div class="icon-wrapper">
-    <button mat-icon-button disableRipple class="icon-button">
-      <mat-icon fontIcon="home" aria-hidden="false" aria-label="Home Icon" class="home-icon"></mat-icon>
-    </button>
+<div class="container home-container">
+  <div class="top-part">
+    <div class="icon-container">
+      <mat-icon class="home-icon" aria-hidden="false" aria-label="Home Icon">home</mat-icon>
+    </div>
   </div>
 
-  <div class="button-group">
+  <div class="bottom-part">
     <button mat-raised-button class="home-button"(click)="openUrl()">Product Details</button>
     <button mat-raised-button class="home-button" (click)="navigateTo('type-of-birds')">Calculate Dose</button>
   </div>

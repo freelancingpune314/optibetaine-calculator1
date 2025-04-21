@@ -1,42 +1,122 @@
-.home-container {
+.container {
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-part {
+  height: 70%;
+  background-color: #fff; /* light orange */
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 24px;
-  background-color: #fff;
+  gap: 5%;
 }
 
-.icon-wrapper {
-  margin-bottom: 40px;
+.top-part {
+  height: 30%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 
-  .icon-button {
-    background-color: #dea13b;
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .home-icon {
-      color: white;
-      font-size: 32px;
-    }
+.icon-container {
+  width: auto;
+  height: auto;
+  background: #dea13b;
+  border-radius: 50%;
+}
+
+.home-icon {
+  font-size: 4vw;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.home-button {
+  background-color: #dea13b !important;
+  color: #fff !important;
+  width: 40%;
+  font-family: auto;
+  font-weight: 600;
+  font-size: 2vw;
+}
+
+/* Small Phones (portrait, <360px width) Galaxy s9 plus, pixel 3, galaxy fold */
+@media (max-width: 359px) {
+  .home-button {
+    font-size: 20px;
+    padding: 12px;
+    width: 90%;
+  }
+
+  .home-icon {
+    font-size: 10vw;
   }
 }
 
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 300px;
-
+/* Phones (portrait, 360px–480px) Galaxy note II, moto g-power, iphone pro-max*/
+@media (min-width: 360px) and (max-width: 480px) {
   .home-button {
-    background-color: #dea13b !important;
-    color: white !important;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    padding: 12px 0;
+    font-size: 20px;
+    padding: 12px;
+    width: 90%;
+  }
+
+  
+  .home-icon {
+    font-size: 8vw;
+  }
+}
+
+/* Large Phones & Small Tablets (portrait, 481px–768px)  Nexus 7, i-pad*/
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-button {
+    font-size: 20px;
+    padding: 12px;
+    width: 90%;
+  }
+
+  
+  .home-icon {
+    font-size: 4vw;
+  }
+}
+
+/* Tablets (landscape or large screens, 769px–1024px) ipad-pro */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-button {
+    font-size: 20px;
+    padding: 12px;
+    width: 60%;
+  }
+
+  
+  .home-icon {
+    font-size: 3vw;
+  }
+}
+
+/* Large Devices (Phablets, Tablets in landscape) */
+@media (min-width: 1025px) {
+  .home-button {
+    font-size: 20px;
+    padding: 12px;
+    width: 60%;
+  }
+
+  
+  .home-icon {
+    font-size: 2vw;
   }
 }

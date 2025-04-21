@@ -31,7 +31,48 @@ $optibetaine-calculator-theme: mat.define-light-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($optibetaine-calculator-theme);
+//@include mat.all-component-themes($optibetaine-calculator-theme);
+
+// Create a custom primary palette using your color (#dea13b)
+$custom-primary-palette: mat.define-palette((
+  50: #fdf5eb,
+  100: #fae2c3,
+  200: #f6cf9a,
+  300: #f1ba6e,
+  400: #eeac53,
+  500: #dea13b, // your primary color
+  600: #c48f33,
+  700: #a97c2b,
+  800: #8f6923,
+  900: #74571b,
+  A100: #ffe7c2,
+  A200: #ffcb8f,
+  A400: #ffb05c,
+  A700: #ffa13b,
+  contrast: (
+    500: #ffffff, // ensures text/icons are visible on top
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  )
+), 500);
+
+// Define accent and warn palettes
+$custom-accent: mat.define-palette(mat.$blue-grey-palette);
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+// Create the custom theme
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary-palette,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+));
+
+// Apply the theme
+@include mat.all-component-themes($custom-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

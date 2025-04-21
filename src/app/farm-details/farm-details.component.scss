@@ -1,85 +1,186 @@
-$farm-orange: #dea13b;
-
-.farm-container {
+.container {
+  height: 100vh; /* Full screen height */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  font-family: auto;
+}
+
+.bottom-part {
+  height: 70%;
+  background-color: #fff; /* light orange */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+}
+
+.top-part {
+  height: 30%;
   background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
-  background-color: $farm-orange;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  padding: 30px 20px;
+.header-wrapper {
+  background: #dea13b;
+  border: none;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  color:#fff;
+}
 
-  h2 {
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
+/* Container styling */
+.farm-container {
+  font-family: auto;
+}
+
+
+/* Form container */
+.form-container {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Fields */
+.field-wrapper {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+.btn-section {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field {
+  display: flex; 
+}
+
+.form-field label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+  font-size: 6vw;
+}
+
+input[matInput] {
+  width: 85%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  text-align: center;
+}
+
+.count-section {
+  display: flex
+  ;
+      flex-direction: row;
+      gap: 8%
+}
+
+/* Age input section */
+.age-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+
+  .age-section1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.form-content {
-  padding: 32px 24px;
+.age-section {
   flex: 1;
-
-  .form-field {
-    margin-bottom: 30px;
-    font-family: Georgia, serif;
-
-    label {
-      font-size: 18px;
-      font-weight: 500;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input {
-      width: 100%;
-      background-color: #e5e5e5;
-      border-radius: 6px;
-      padding: 12px;
-      font-size: 18px;
-      text-align: center;
-      border: none;
-    }
-  }
-
-  .age-section {
-    .age-inputs {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-
-      div {
-        flex: 1;
-
-        .sub-label {
-          display: block;
-          font-size: 16px;
-          margin-bottom: 6px;
-        }
-      }
-    }
-  }
-
-  .calculate-btn {
-    width: 100%;
-    background-color: $farm-orange !important;
-    color: white !important;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 12px 0;
-    margin-top: 30px;
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.sub-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+/* Error message */
 .error-msg {
   color: red;
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
+/* Button */
+.btn-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calculate-btn {
+  color: #fff !important;
+  width: 50%;
+  font-size: 6vw;
+  font-family: auto;
+}
+
+.calculate-btn:hover {
+  background-color: #e59400;
+}
+
+/* Small Phones (portrait, <360px width) Galaxy s9 plus, pixel 3, galaxy fold */
+@media (max-width: 359px) {
+  
+}
+
+/* Phones (portrait, 360px–480px) Galaxy note II, moto g-power, iphone pro-max*/
+@media (min-width: 360px) and (max-width: 480px) {
+  
+}
+
+/* Large Phones & Small Tablets (portrait, 481px–768px)  Nexus 7, i-pad*/
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  input {
+    width: 100% !important;
+    height: 65% !important;
+  }
+
+  #calculate-btn {
+    height: 50% !important;
+  }
+}
+
+/* Tablets (landscape or large screens, 769px–1024px) ipad-pro */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  
+}
+
+/* Large Devices (Phablets, Tablets in landscape) */
+@media (min-width: 1025px) {
+  
+}
