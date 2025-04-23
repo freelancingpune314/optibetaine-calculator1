@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+declare var cordova: any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'optibetaine-calculator';
+  showSplash = true;
+
+  constructor() {
+    // Hide splash after 3 seconds
+    setTimeout(() => {
+      this.showSplash = false;
+    }, 6000);
+  }
+
+
 }
